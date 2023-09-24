@@ -1,33 +1,26 @@
 import React from "react";
 
-import { Card, CardHeader, CardBody, CardFooter, Divider, Link, Image } from "@nextui-org/react";
+import { Divider, Link } from "@nextui-org/react";
+import Form from "./Form";
 
 export default function CardNext() {
     return (
-    <Card 
-        isBlurred
+    <div
         className="max-w-[800px] font-inter">
-            <CardHeader className="flex gap-3">
-            
-                <div className="flex flex-col">
-                    <p className="text-md">NextUI</p>
-                    <p className="text-small text-default-500">nextui.org</p>
-                </div>
-            </CardHeader>
+            <div>
+                <p className="font-inter text-lg font-semibold text-gray-300 mb-4">I have created this page for demonstration purposes to be able to validate an automata</p>
+            </div>
             <Divider />
-            <CardBody>
-                <p>Make beautiful websites regardless of your design experience.</p>
-            </CardBody>
-            <Divider />
-            <CardFooter>
+            <div className="flex items-center flex-col gap-2">
+                <Form/>
                 <Link
                     isExternal
                     showAnchorIcon
-                    href="https://github.com/nextui-org/nextui"
+                    href="https://github.com/Leonardo-Toledo-V"
                 >
                     Visit source code on GitHub.
                 </Link>
-            </CardFooter>
-        </Card>
+            </div>
+        </div>
     );
 }
