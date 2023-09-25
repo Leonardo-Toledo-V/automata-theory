@@ -1,8 +1,11 @@
 import Image from 'next/image';
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 export default function IsValid() {
     const audioRef = useRef(null);
+    useEffect(()=>{
+        reproducirAudio();
+    },[])
 
     const reproducirAudio = () => {
         audioRef.current.play();
@@ -14,7 +17,7 @@ export default function IsValid() {
                 <source src="/music.mp3" type="audio/mp3" />
             </audio>
             <Image src='/giphy.gif' alt='dance' width={300} height={300} />
-            <button onClick={() => reproducirAudio()}>Hola</button>
+            qbuenautomata
         </div>
     )
 }

@@ -10,7 +10,9 @@ export default function Home() {
           <span className="bg-gradient-to-r from-[#ccd0d3] to-[#2c3e50] text-transparent bg-clip-text">Lenguages and automata</span>
         </h1>
       </div>
-      <CardNext />
+      <div className="font-inter">
+        <CardNext />
+      </div>
     </main>
   )
 }

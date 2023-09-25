@@ -2,7 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Providers from './providers'
 
-const inter = Inter({ subsets: ['latin'], weight:'300',variable: '--font-inter'})
+const inter = Inter({ subsets: ['latin'], weight:'400',variable: '--font-inter'})
 const interBold = Inter({ subsets: ['latin'], weight:'800',variable: '--font-interBold'})
 
 export const metadata = {

@@ -9,10 +9,6 @@ export default function CardNext() {
     return (
         <div
             className="max-w-[800px] font-inter">
-            <div>
-                <p className="font-inter text-sm truncate max-w-[200px] lg:max-w-7xl xl:text-lg font-semibold text-[#ccd0d3] mb-4 text-center">I have created this page for demonstration purposes to be able to validate an automata.</p>
-            </div>
-            <Divider />
             <div className="flex items-center flex-col gap-2">
                 <RadioGroup
                 className="mt-8"
