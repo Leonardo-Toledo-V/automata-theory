@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Avatar, Input } from "@nextui-org/react";
 import IsValid from "./IsValid";
+import ModalNext from "./Modal";
 
 export default function Form() {
     const [value, setValue] = useState("");
@@ -63,11 +64,11 @@ export default function Form() {
                         const num4 = automateArray[6];
                         if (parseInt(num1) >= 1) {
                             setQ4(true);
-                            if(parseInt(num2) >= 0) {
+                            if (parseInt(num2) >= 0) {
                                 setQ6(true);
-                                if(parseInt(num3) >= 0){
+                                if (parseInt(num3) >= 0) {
                                     setQ7(true);
-                                    if(parseInt(num4) >= 0){
+                                    if (parseInt(num4) >= 0) {
                                         setQ8(true);
                                         if (automateArray[7] === "-") {
                                             setQ14(true);
@@ -93,9 +94,9 @@ export default function Form() {
                                             }
                                         }
                                     }
-                                }else if (parseInt(num3)>= 1){
+                                } else if (parseInt(num3) >= 1) {
                                     setQ11(true);
-                                    if(parseInt(num4) >= 0) {
+                                    if (parseInt(num4) >= 0) {
                                         setQ8(true);
                                         if (automateArray[7] === "-") {
                                             setQ14(true);
@@ -104,13 +105,13 @@ export default function Form() {
                                             }
                                         }
                                     }
-                                    
+
                                 }
-                            }else if (parseInt(num2) >= 1) {
+                            } else if (parseInt(num2) >= 1) {
                                 setQ9(true);
-                                if(parseInt(num3) >= 0){
+                                if (parseInt(num3) >= 0) {
                                     setQ7(true)
-                                    if(parseInt(num4) >= 0){
+                                    if (parseInt(num4) >= 0) {
                                         setQ8(true);
                                         if (automateArray[7] === "-") {
                                             setQ14(true);
@@ -141,11 +142,11 @@ export default function Form() {
                         const num4 = automateArray[6];
                         if (parseInt(num1) >= 1) {
                             setQ4(true);
-                            if(parseInt(num2) >= 0) {
+                            if (parseInt(num2) >= 0) {
                                 setQ6(true);
-                                if(parseInt(num3) >= 0){
+                                if (parseInt(num3) >= 0) {
                                     setQ7(true);
-                                    if(parseInt(num4) >= 0){
+                                    if (parseInt(num4) >= 0) {
                                         setQ8(true);
                                         if (automateArray[7] === "-") {
                                             setQ14(true);
@@ -171,9 +172,9 @@ export default function Form() {
                                             }
                                         }
                                     }
-                                }else if (parseInt(num3)>= 1){
+                                } else if (parseInt(num3) >= 1) {
                                     setQ11(true);
-                                    if(parseInt(num4) >= 0) {
+                                    if (parseInt(num4) >= 0) {
                                         setQ8(true);
                                         if (automateArray[7] === "-") {
                                             setQ14(true);
@@ -182,13 +183,13 @@ export default function Form() {
                                             }
                                         }
                                     }
-                                    
+
                                 }
-                            }else if (parseInt(num2) >= 1) {
+                            } else if (parseInt(num2) >= 1) {
                                 setQ9(true);
-                                if(parseInt(num3) >= 0){
+                                if (parseInt(num3) >= 0) {
                                     setQ7(true)
-                                    if(parseInt(num4) >= 0){
+                                    if (parseInt(num4) >= 0) {
                                         setQ8(true);
                                         if (automateArray[7] === "-") {
                                             setQ14(true);
@@ -328,6 +329,9 @@ export default function Form() {
                 </div>
             </div>
             <div className="flex flex-col gap-4">
+                <h3 className="text-sm text-center font-inter mt-4">
+                    <span className="bg-gradient-to-l from-[#ccd0d3] to-[#728596] text-transparent bg-clip-text">SZ-0001-A to TB-9999-Z</span>
+                </h3>
                 <Input
                     autoComplete="off"
                     label="Enter your automata:"
@@ -341,7 +345,7 @@ export default function Form() {
                     className="max-w-xs"
                 />
             </div>
-            {isInvalid ? "Automate false" : <IsValid />}
+            {isInvalid ? "" : <ModalNext />}
         </div>
     );
 }

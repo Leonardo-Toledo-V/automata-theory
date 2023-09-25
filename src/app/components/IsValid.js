@@ -17,7 +17,6 @@ export default function IsValid() {
                 <source src="/music.mp3" type="audio/mp3" />
             </audio>
             <Image src='/giphy.gif' alt='dance' width={300} height={300} />
-            qbuenautomata
         </div>
     )
 }
