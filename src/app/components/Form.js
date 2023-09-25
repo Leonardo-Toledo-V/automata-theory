@@ -249,7 +249,7 @@ export default function Form() {
 
     return (
         <div className="mt-4 flex flex-col justify-center items-center gap-4">
-            <div className="w-screen h-full">
+            <div className="w-screen h-[400px]">
                 <div className="flex items-center justify-center">
                     <div className="grid grid-cols-11 grid-rows-5 gap-4">
                         {/* Fila 1 */}
