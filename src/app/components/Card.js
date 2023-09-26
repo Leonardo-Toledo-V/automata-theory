@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Divider, Link, Radio, RadioGroup } from "@nextui-org/react";
+import {  Link, Radio, RadioGroup } from "@nextui-org/react";
 import FormRegex from "./FormRegex";
 import Form from "./Form";
 

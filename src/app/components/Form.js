@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Avatar, Input } from "@nextui-org/react";
-import IsValid from "./IsValid";
 import ModalNext from "./Modal";
 
 export default function Form() {
     const [value, setValue] = useState("");
     const [isInvalid, setIsInvalid] = useState(true);
-    const [graphData, setGraphData] = useState(null);
     const [q0, setQ0] = useState(true);
     const [q1, setQ1] = useState(false);
     const [q2, setQ2] = useState(false);
@@ -105,7 +103,6 @@ export default function Form() {
                                             }
                                         }
                                     }
-
                                 }
                             } else if (parseInt(num2) >= 1) {
                                 setQ9(true);
@@ -167,7 +164,7 @@ export default function Form() {
                                         setQ13(true);
                                         if (automateArray[7] === "-") {
                                             setQ14(true);
-                                            if (validateAlphabet(automateArray[8])) {//Here
+                                            if (validateAlphabet(automateArray[8])) {
                                                 setIsInvalid(false);
                                             }
                                         }
@@ -183,7 +180,6 @@ export default function Form() {
                                             }
                                         }
                                     }
-
                                 }
                             } else if (parseInt(num2) >= 1) {
                                 setQ9(true);
@@ -193,7 +189,7 @@ export default function Form() {
                                         setQ8(true);
                                         if (automateArray[7] === "-") {
                                             setQ14(true);
-                                            if (validateAlphabet(automateArray[8])) {//Here
+                                            if (validateAlphabet(automateArray[8])) {
                                                 setIsInvalid(false);
                                             }
                                         }
@@ -208,30 +204,7 @@ export default function Form() {
         }
     };
 
-    const validateNumbers = (num1, num2, num3, num4, slazh) => {
-        if (slazh === "-") {
-            if (num1 === "0") {
-                setQ5(true);
-                if (num2 === "0") {
-                    setQ10(true);
-                    if (num3 === "0") {
-                        setQ12(true);
-                        if (num4 > 1) {
-                            setQ13(true);
-                        }
-                    }
-                }
-            }
-            setQ14(true);
-            const concatenated = `${num1}${num2}${num3}${num4}`;
-            const parsedNumber = parseInt(concatenated);
-            return parsedNumber >= 1 && parsedNumber <= 9999 && concatenated.length === 4;
-        }
-        return false;
-    };
-
     const validateAlphabet = (letter) => {
-        console.log(letter)
         const alphabet = [
             "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "Ñ", "O", "P",
             "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",
@@ -252,7 +225,6 @@ export default function Form() {
             <div className="w-screen h-[400px]">
                 <div className="flex items-center justify-center">
                     <div className="grid grid-cols-11 grid-rows-5 gap-4">
-                        {/* Fila 1 */}
                         <div className="col-span-11 row-span-1 flex justify-around">
                             <div className="w-1/11 p-2 text-black">---------------</div>
                             <div className="w-1/11 p-2 text-black"> ---------------</div>
@@ -266,8 +238,6 @@ export default function Form() {
                             <div className="w-1/11 p-2 text-black"> </div>
                             <div className="w-1/11 p-2 text-black"> </div>
                         </div>
-
-                        {/* Filas del medio */}
                         <div className="col-span-11 row-span-1 bg-transparent flex justify-around">
                             <div className="w-1/11 p-2"><Avatar isBordered color={q0 ? "primary" : "default"} name="Q0" /></div>
                             <div className="w-1/11 p-2"><Avatar isBordered color={q1 ? "primary" : "default"} name="Q1" /></div>
@@ -281,8 +251,6 @@ export default function Form() {
                             <div className="w-1/11 p-2"> </div>
                             <div className="w-1/11 p-2"> </div>
                         </div>
-
-                        {/* Filas de abajo */}
                         <div className="col-span-11 row-span-1 bg-transparent flex justify-around">
                             <div className="w-1/11 p-2"></div>
                             <div className="w-1/11 p-2 ml-20"><Avatar isBordered color={q15 ? "primary" : "default"} name="Q15" /></div>
@@ -296,7 +264,6 @@ export default function Form() {
                             <div className="w-1/11 p-2"></div>
                             <div className="w-1/11 p-2 ml-12"><Avatar isBordered color={q16 ? "primary" : "default"} name="Q16" /></div>
                         </div>
-
                         <div className="col-span-11 row-span-1 bg-transparent flex justify-around">
                             <div className="w-1/11 p-2"></div>
                             <div className="w-1/11 p-2"></div>
@@ -310,7 +277,6 @@ export default function Form() {
                             <div className="w-1/11 p-2"></div>
                             <div className="w-1/11 p-2"></div>
                         </div>
-
                         <div className="col-span-11 row-span-1 bg-transparent flex justify-around">
                             <div className="w-1/11 p-2"> </div>
                             <div className="w-1/11 p-2"> </div>
@@ -325,7 +291,6 @@ export default function Form() {
                             <div className="w-1/11 p-2"> </div>
                         </div>
                     </div>
-
                 </div>
             </div>
             <div className="flex flex-col gap-4">
